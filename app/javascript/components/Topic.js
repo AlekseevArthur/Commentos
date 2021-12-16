@@ -34,7 +34,7 @@ const Topic = (props) => {
     <button className="btn btn-info" onClick={openCommentForm}>Comment</button>
     {commentFlag ? <CommentForm
       updateComments={updateComments}
-      foo={openCommentForm}
+      openCommentForm={openCommentForm}
       topicId={props.topic_id}
       user_id={info.user_id}
     />
@@ -62,7 +62,7 @@ const CommentForm = (props) => {
       body: JSON.stringify(formValues)
     })
       .then(() => {
-        props.foo()
+        props.openCommentForm()
         props.updateComments(true)
       })
   }

@@ -16,10 +16,11 @@ class CommentsController < ApplicationController
     @comment.topic_id = params[:topic_id]
     respond_to do |format|
       if @comment.save!
-        format.json { render json: @comment, status: :created }
+        format.json { render json: @comment, status: :created }      
       else
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
+      format.html
     end
   end
 

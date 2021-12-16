@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Route , withRouter} from 'react-router-dom';
 
 class TopicNew extends React.Component {
   constructor(props) {
